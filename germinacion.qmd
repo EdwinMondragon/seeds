@@ -1,99 +1,171 @@
 ---
-title: "Germinacion"
-format: html
-editor: "Edwin"
+title: "Germinacion en semillas de garbanzo"
+format:
+  html:
+    toc: true
+    toc-location: left
+    number-sections: true
+    embed-resources: true
+    output-file: index 
 ---
-# cargar lybrari
+# Cargar librerias
 ```{r}
 source("https://inkaverse.com/setup.r")
-li
+library(tidyverse)
+library(GerminaR)
 ```
-
 
 # Importar datos
 ```{r}
-url <- "https://docs.google.com/spreadsheets/d/1Eg67TqQINnAfa29ncqlPCAN7umUbyrkBbNOjd1us85Q/edit?gid=1454035531#gid=1454035531"
+url <- "https://docs.google.com/spreadsheets/d/16eZ0pfgKOVMiMsAfz5IzCG9rTSpA0nHeiMpe4MsDcMM/edit?gid=0#gid=0"
 
 gs <- as_sheets_id(url)
 
 fb <- range_read(gs
                  , sheet = "fb") %>% 
-  mutate(across(factor1,  ~as.factor(.))) %>% 
-  dplyr::select(!c(ger_7, ger_8, ger_9, ger_10)) %>% 
+  mutate(across(Tratamiento,  ~as.factor(.))) %>% 
   as.data.frame()
 str(fb)
 ```
 
+## Análisis de Germinación
 
 ```{r}
-gsm <- ger_summary(SeedN = "seed"
-                   , evalName = "ger_"
+gsm <- ger_summary(SeedN = "seeds"
+                   , evalName = "d"
                    , data = fb
                    )
 gsm %>% kable()
-##Tiempo medio de germinacion```
+
 ```
-## Germination Percentage (GRP)
+
+## Porcentaje de Germinación (GRP)
 
 ```{r}
-# analysis of variance
 
-av <- aov(mgt ~ block + factor1, data = gsm)
+av <- aov(grp ~ Tratamiento, data = gsm)
 anova(av)
 
-# mean comparison test
 
 mc_grp <- ger_testcomp(aov = av
-                       , comp = c("factor1")
+                       , comp = c("Tratamiento")
                        , type = "snk"
                        )
-
-# data result
 
 mc_grp$table %>% 
    kable(caption = "Mean germinacion time comparison")
 
-# date result
-
-plot <- mc_grp$table %>% 
-   plot_smr (data = .
+grp <- mc_grp$table %>% 
+   fplot(data = .
        , type = "bar"
-       , x = "factor1"
-       , y = "mgt"
-       # , ylimits = c(0, 3, 0.5)
+       , x = "Tratamiento"
+       , y = "grp"
+       , group = "Tratamiento"
+       , ylimits = c(0, 120, 30)
+       , ylab = "Germinación ('%')"
+       , xlab = "Escarificación de semillas"
        , error = "ste"
        , sig = "sig"
-       # , color = F
+       , color = T 
        )
-plot
+
+grp
 ```
-#Germinacion en el tiempo
+
+## Germinación en el tiempo (MGT)
+
 ```{r}
-git <- ger_intime(Factor = "factor1"
-                  , SeedN = "seed"
-                  , evalName = "ger_"
+
+av <- aov(mgt ~ Tratamiento, data = gsm)
+anova(av)
+
+mc_mgt <- ger_testcomp(aov = av
+                       , comp = c("Tratamiento")
+                       , type = "snk")
+
+mc_mgt$table %>% 
+   kable(caption = "Mean germination time comparison")
+
+mgt <- mc_mgt$table %>% 
+   fplot(data = .
+       , type = "bar" 
+       , x = "Tratamiento"
+       , y = "mgt"
+       , group = "Tratamiento"
+       , ylimits = c(0,10, 1)
+       , ylab = "Germinación en el tiempo (Días)"
+       , xlab = "Escarificación de semillas"
+       , sig = "sig"
+       , error = "ste"
+       , color = T
+       )
+
+mgt
+```
+
+## Análisis acumulativo de germinación
+
+```{r}
+
+git <- ger_intime(Factor = "Tratamiento"
+                  , SeedN = "seeds"
+                  , evalName = "d"
                   , method = "percentage"
                   , data = fb
                   )
 
-# data result
-
 git %>% 
-   kable(caption = "Cumulative germination by nacl factor")
+   head(10) %>% 
+   kable(caption = "Acumulación de germinación por método de escarificación")
 
-plot <- git %>% 
+Tratamiento <- git %>% 
    fplot(data = .
         , type = "line"
         , x = "evaluation"
         , y = "mean"
-        , group = "factor1
-        "
+        , group = "Tratamiento"
         , ylimits = c(0, 110, 10)
-        , ylab = "Germination ('%')"
-        , xlab = "Day"
+        , ylab = "Germinación ('%')"
+        , xlab = "Dias"
+        , glab = "Tratamiento"
         , color = T
         , error = "ste"
         )
-plot
+Tratamiento
+```
+
+## Índice de sincronización (SYN)
+
+```{r}
+av <- aov(syn ~ Tratamiento, data = gsm)
+anova(av)
+
+
+mc_syn <- ger_testcomp(aov = av
+                       , comp = "Tratamiento"
+                       , type = "snk"
+                       )
+
+mc_syn$table %>% 
+   kable(caption = "Mean germination time comparison")
+
+
+syn <- mc_syn$table %>% 
+   fplot(data = .
+       , type = "bar" 
+       , x = "Tratamiento"
+       , y = "syn"
+       , group = "Tratamiento"
+       , ylimits = c(0,1, 0.1)
+       , ylab = "Índice de sincronización"
+       , xlab = "Métodos de escarificación"
+       , glab = "Tratamiento"
+       , sig = "sig"
+       , error = "ste"
+       , color = T
+       )
+
+syn
+
 ```
 
