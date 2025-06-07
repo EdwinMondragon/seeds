@@ -1,6 +1,5 @@
 ---
-title: "Efecto de la escarificación física y química en la germinación de semillas de garbanzo (*Cicer arietinum*)"
-author: "Edwin Mondragon-Jhinmy Paredes-Jhodany Parejas-Nixon Pizarro-Gimena Vega"
+title: "Efecto de la escarificación física y química en la germinación de semillas de garbanzo (*Cicer arietinum* L.)"
 format:
   html:
     toc: true
@@ -15,6 +14,12 @@ header-includes:
         text-align: justify;
         color: orange;
       }
+      .autores {
+        text-align: center;
+        font-size: 12pt;
+        color: black;
+        margin-top: -10px;
+      }
       .references {
         text-align: justify;
         text-indent: -1.27cm;
@@ -23,6 +28,10 @@ header-includes:
       }
     </style>
 ---
+
+
+<div class="autores">**Edwin Mondragon, Jhinmy Paredes, Jhodany Parejas, Nixon Pizarro, Gimena Vega**</div>
+
 
 # <span style="color: orange;">INTRODUCCIÓN </span>
 <div style="text-align: justify;">
@@ -56,7 +65,7 @@ Los resultados permitirán definir la estrategia más eficiente y replicable par
 # <span style="color: orange;">MATERIALES </span>
 <div style="text-align: justify;">
 ## Semillas
-Se emplearon semillas comerciales de garbanzo (Cicer arietinum L.) variedad criolla Tumbes , con 11 % de humedad y pureza física del 99 %. Las semillas se conservaron a temperatura ambiente hasta el inicio de las pruebas, tal como recomiendan las normas de la International Seed Testing Association (ISTA, 2025).
+Se emplearon semillas comerciales de garbanzo (*Cicer arietinum* L.) variedad criolla Tumbes , con 11 % de humedad y pureza física del 99 %. Las semillas se conservaron a temperatura ambiente hasta el inicio de las pruebas, tal como recomiendan las normas de la International Seed Testing Association (ISTA, 2025).
 
 ## Equipos y reactivos
 
@@ -112,7 +121,7 @@ c) La humedad del sustrato se mantuvo con pulverizaciones diarias (≈ 1 mL) seg
 ## Variables evaluadas
 ```{r}
 libro2 <- range_read(gs, sheet = "c")
-kable(libro2, caption = "Tabla 3: Variables evaludas") %>%
+kable(libro2, caption = "Tabla 3: Variables evaluadas") %>%
   kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"))
 ```
 
@@ -127,13 +136,6 @@ c) Las diferencias significativas se evaluaron con la prueba Student–Newman–
 d) Normalidad y homocedasticidad se verificaron con gráficas Q–Q y residuales vs. ajustados (ggplot2).
 
 e) Todo el análisis se ejecutó en R con los paquetes tidyverse 1.3.2, GerminaR 2.3.1, agricolae 1.3-7 y ggplot2 3.4.4.
-</div>
-
-# <span style="color: orange;">RESULTADOS </span>
-<div style="text-align: justify;">
-A continuación, se presentan las salidas gráficas y una breve descripción numérica de los hallazgos:
-Todos los valores se expresan como media ± E.E. (n = 5).
-La comparación de medias se realizó con la prueba SNK (α = 0,05).
 </div>
 
 # Cargar librerias
@@ -168,6 +170,12 @@ gsm <- ger_summary(SeedN = "seeds"
 gsm %>% kable()
 
 ```
+# <span style="color: orange;">RESULTADOS </span>
+<div style="text-align: justify;">
+A continuación, se presentan las salidas gráficas y una breve descripción numérica de los hallazgos:
+Todos los valores se expresan como media ± E.E. (n = 5).
+La comparación de medias se realizó con la prueba SNK (α = 0,05).
+</div>
 
 ## Porcentaje de Germinación (GRP)
 
@@ -183,7 +191,7 @@ mc_grp <- ger_testcomp(aov = av
                        )
 
 mc_grp$table %>% 
-   kable(caption = "Mean germinacion time comparison")
+   kable(caption = "Comparación de la media del porcentaje de germinación")
 
 grp <- mc_grp$table %>% 
    fplot(data = .
@@ -214,7 +222,7 @@ mc_mgt <- ger_testcomp(aov = av
                        , type = "snk")
 
 mc_mgt$table %>% 
-   kable(caption = "Mean germination time comparison")
+   kable(caption = "Comparación del tiempo medio de germinación")
 
 mgt <- mc_mgt$table %>% 
    fplot(data = .
@@ -277,7 +285,7 @@ mc_syn <- ger_testcomp(aov = av
                        )
 
 mc_syn$table %>% 
-   kable(caption = "Mean germination time comparison")
+   kable(caption = "Comparación de medias del índice de sincronización de la germinación")
 
 
 syn <- mc_syn$table %>% 
@@ -302,15 +310,15 @@ syn
 
 ## Eficacia relativa de los métodos de escarificación
 <div style="text-align: justify;">
-El tratamiento Lija superó de forma consistente al resto de métodos en las tres métricas evaluadas. Aunque el porcentaje final de germinación fue bajo en términos absolutos (7,8 %, Figura 1), duplicó al del Control y multiplicó por ocho los valores de Acetona y Agua caliente. Este resultado es coherente con la literatura que señala la abrasión mecánica como la vía más fiable para romper la testa endurecida de leguminosas (Wen et al., 2024). El lijado crea microfracturas localizadas y facilita la imbibición sin exponer completamente al embrión a estrés químico o térmico (Bewley & Black, 1994).
+El tratamiento Lija superó de forma consistente al resto de métodos en las tres métricas evaluadas. Aunque el porcentaje final de germinación fue bajo en términos absolutos (7,8 %, **Figura 1**), duplicó al del Control y multiplicó por ocho los valores de Acetona y Agua caliente. Este resultado es coherente con la literatura que señala la abrasión mecánica como la vía más fiable para romper la testa endurecida de leguminosas (Wen et al., 2024). El lijado crea microfracturas localizadas y facilita la imbibición sin exponer completamente al embrión a estrés químico o térmico (Bewley & Black, 1994).
 La Acetona no mejoró la germinación. Kader y Hosseini (2020) mostraron que solventes orgánicos pueden ser efectivos en Lens y Vigna cuando se ajusta el tiempo de inmersión; sin embargo, exposiciones moderadas (≤ 10 min) en garbanzo parecen insuficientes para disolver la cutícula cerosa de macrosclereidas. Incrementar la temperatura del solvente o emplear mezclas con etanol podría aumentar su capacidad de ablandamiento, aunque con mayor riesgo toxicológico.
-Respecto a Agua caliente, la temperatura de 80 °C durante 5 min fue insuficiente para provocar la dilatación diferencial de la testa. Varios autores reportan que Cicer requiere ≥ 90 °C o un choque térmico seguido de enfriamiento brusco para obtener aperturas microscópicas (Saxena et al., 2002). Sin ese gradiente térmico, la permeabilidad apenas cambia, lo que explica el IVG ≈ 0,3 observado (Figura 2).
+Respecto a Agua caliente, la temperatura de 80 °C durante 5 min fue insuficiente para provocar la dilatación diferencial de la testa. Varios autores reportan que Cicer requiere ≥ 90 °C o un choque térmico seguido de enfriamiento brusco para obtener aperturas microscópicas (Saxena et al., 2002). Sin ese gradiente térmico, la permeabilidad apenas cambia, lo que explica el IVG ≈ 0,3 observado (**Figura 2**).
 </div>
 
 ## Velocidad frente a porcentaje: implicaciones prácticas
 
 <div style="text-align: justify;">
-Aunque el Control y la Lija mostraron valores de MGT estadísticamente similares (~2,6 d; Figura 3), las curvas acumuladas (Figura 4) revelan que el lijado adelantó el 80 % de su germinación al día 3, mientras el control tardó hasta el día 5 para acercarse a 65 %. Para viveros o ensayos de fenotipado, esa ganancia de dos días puede traducirse en lotes más uniformes y menores costes de manejo (Dayan & Gutterman, 2019).
+Aunque el Control y la Lija mostraron valores de MGT estadísticamente similares (~2,6 d; **Figura 3**), las curvas acumuladas (**Figura 4**) revelan que el lijado adelantó el 80 % de su germinación al día 3, mientras el control tardó hasta el día 5 para acercarse a 65 %. Para viveros o ensayos de fenotipado, esa ganancia de dos días puede traducirse en lotes más uniformes y menores costes de manejo (Dayan & Gutterman, 2019).
 </div>
 
 ## Limitaciones del estudio
