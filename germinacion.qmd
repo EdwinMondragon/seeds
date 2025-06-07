@@ -1,14 +1,29 @@
 ---
-title: "Germinacion en semillas de garbanzo"
+title: "Efecto de la escarificación física y química en la germinación de semillas de garbanzo (*Cicer arietinum*)"
+author: "Edwin Mondragon-Jhinmy Paredes-Jhodany Parejas-Nixon Pizarro-Gimena Vega"
 format:
   html:
     toc: true
     toc-location: left
     number-sections: true
     embed-resources: true
-    output-file: index 
+    output-file: index
+header-includes:
+  - |
+    <style>
+      h1.title {
+        text-align: justify;
+        color: orange;
+      }
+    </style>
+     <style>
+      h2.author {
+        text-align: justify;
+      }
+    </style>
 ---
 # Cargar librerias
+
 ```{r}
 source("https://inkaverse.com/setup.r")
 library(tidyverse)
@@ -16,6 +31,7 @@ library(GerminaR)
 ```
 
 # Importar datos
+
 ```{r}
 url <- "https://docs.google.com/spreadsheets/d/16eZ0pfgKOVMiMsAfz5IzCG9rTSpA0nHeiMpe4MsDcMM/edit?gid=0#gid=0"
 
@@ -92,7 +108,7 @@ mgt <- mc_mgt$table %>%
        , x = "Tratamiento"
        , y = "mgt"
        , group = "Tratamiento"
-       , ylimits = c(0,10, 1)
+       , ylimits = c(0,5, 0.5)
        , ylab = "Germinación en el tiempo (Días)"
        , xlab = "Escarificación de semillas"
        , sig = "sig"
