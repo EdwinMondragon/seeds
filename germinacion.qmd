@@ -58,9 +58,9 @@ Evaluar comparativamente cuatro tratamientos de escarificación lija (físico), 
 
 ## OBJETIVOS ESPECÍFICOS
 
-a) Evaluar eL porcentaje de germinación de las semillas de garbanzo (GRP).
+a) Evaluar el porcentaje de germinación de las semillas de garbanzo (GRP).
 b) Determinar la germinación en el tiempo (MGT).
-c) Estudiar el analisis acumulativo de germinación.
+c) Estudiar el análisis acumulativo de germinación.
 d) Analizar el índice de sincronización (SYN).
 
 </div>
@@ -308,12 +308,15 @@ El gráfico muestra cómo va avanzando la germinación de las semillas de garban
 
 
 **Lija y Control**
+
 Fueron los tratamientos más efectivos. Desde los primeros días ya muestran un aumento constante en el porcentaje de semillas germinadas. Esto indica que permiten una germinación rápida y continua, alcanzando valores cercanos al 100% al finalizar el experimento.
 
 **Agua caliente**
+
 Tuvo un inicio lento y una germinación muy baja. Aunque algunas semillas llegaron a germinar, el avance fue mínimo. Esto sugiere que el tratamiento con agua caliente no favorece significativamente la germinación del garbanzo
 
 **Acetona**
+
 Fue el tratamiento menos efectivo. No se registró ninguna germinación durante todo el periodo evaluado, lo que indica que este método posiblemente dañó las semillas o inhibió completamente su desarrollo.
 
 
@@ -362,6 +365,7 @@ Esto sugiere que, aunque la escarificación con lija mejora el porcentaje total 
 # <span style="color: orange;">DISCUSIÓN </span>
 
 <div style="text-align: justify;">
+
 Los tratamientos aplicados para inducir la germinación mostraron diferencias sustanciales en las variables evaluadas, tanto en cantidad como en calidad del proceso germinativo. La escarificación mecánica mediante lijado fue el tratamiento más eficaz de forma integral, superando en prácticamente todas las métricas al Control, al tratamiento con agua caliente y a la acetona.
 
 </div>
@@ -370,6 +374,7 @@ Los tratamientos aplicados para inducir la germinación mostraron diferencias su
 ## Porcentaje y velocidad de germinación
 
 <div style="text-align: justify;">
+
 El tratamiento Lija superó de forma consistente al resto de métodos en las tres métricas evaluadas. Aunque el porcentaje final de germinación fue bajo en términos absolutos (7,8 %, Figura 1), duplicó al del Control y multiplicó por ocho los valores de Acetona y Agua caliente. Este resultado es coherente con la literatura que señala la abrasión mecánica como la vía más fiable para romper la testa endurecida de leguminosas (Wen et al., 2024). El lijado crea microfracturas localizadas y facilita la imbibición sin exponer completamente al embrión a estrés químico o térmico (Bewley & Black, 1994).
 
 La Acetona no mejoró la germinación. Kader y Hosseini (2020) mostraron que solventes orgánicos pueden ser efectivos en Lens y Vigna cuando se ajusta el tiempo de inmersión; sin embargo, la exposición en garbanzo parece tener algún efecto fitotóxico provocando la muerte del embrión. 
@@ -381,26 +386,35 @@ Respecto a Agua caliente, la temperatura de 80 °C durante 5 min parece haber ca
 ## Índice de velocidad, vigor y coeficiente de variación
 
 <div style="text-align: justify;">
+
 El índice de velocidad de germinación (IVG) fue significativamente más alto en el tratamiento Lija (1,56), seguido por el Control (1,46), mientras que los tratamientos con Agua caliente y Acetona presentaron valores casi nulos. Este comportamiento reafirma la capacidad del lijado para acelerar el proceso germinativo. Asimismo, el tratamiento Lija presentó los valores más altos de vigor (VGT = 0,94) y un coeficiente de variación de la germinación (CVG = 38,6) levemente superior al Control (35,8), pero con menor dispersión absoluta en otras métricas, lo que sugiere mayor estabilidad del tratamiento.
 
 El vigor es una variable crítica, ya que no solo implica que las semillas germinen, sino que lo hagan con suficiente energía para emerger y establecerse. Como lo señalan Finch-Savage y Bassel (2016), un vigor alto predice mejores desempeños en campo, especialmente bajo condiciones de estrés. En este sentido, el tratamiento Lija aportó ventajas claras.
 </div>
 
 ## Sincronización de la germinación
-<div st, el índice de sincronización (SYN) no mostró diferencias estadísticas entre Control y Lija (~0,34), el lijado presentó menor desviación estándar (±0,0445 vs ±0,0783), lo cual sugiere una germinación más homogénea entre repeticiones. En aplicaciones donde se requiere uniformidad temporal —como viveros, cultivos hidropónicos o ensayos fenotípicos— esta característica puede resultar crítica (Trudgill et al., 2000). La sincronía es especialmente importante en condiciones de competencia intraspecífica, donde la germinación escalonada puede generar desventajas competitivas en las últimas plántulas emergidas.
+
+<div style="text-align: justify;"> 
+
+El índice de sincronización (SYN) no mostró diferencias estadísticas entre Control y Lija (~0,34), el lijado presentó menor desviación estándar (±0,0445 vs ±0,0783), lo cual sugiere una germinación más homogénea entre repeticiones. En aplicaciones donde se requiere uniformidad temporal —como viveros, cultivos hidropónicos o ensayos fenotípicos— esta característica puede resultar crítica (Trudgill et al., 2000). La sincronía es especialmente importante en condiciones de competencia intraspecífica, donde la germinación escalonada puede generar desventajas competitivas en las últimas plántulas emergidas.
 </div>
 
 ## Ineficacia de los tratamientos alternativos
+
 <div style="text-align: justify;">
+
 El tratamiento con Acetona fue completamente ineficaz, con 0 % de germinación en todas las repeticiones. A pesar de que Kader y Hosseini (2020) demostraron cierta eficacia del uso de solventes orgánicos en otras leguminosas, como Lens culinaris o Vigna radiata, los resultados sugieren que la estructura de la testa en Cicer podría ser más débil a la acción disolvente de acetona bajo tiempos de exposición moderados (5 minutos). Ajustes en la concentración, temperatura o tiempo podrían incrementar su eficacia.
 
 En cuanto al tratamiento de agua caliente (80 °C durante 5 minutos), la germinación fue muy baja y dispersa (GRP ≈19 %, IVG ≈0,3). Aunque algunos autores reportan que el calor puede inducir microfisuras en la testa mediante dilatación diferencial (Saxena et al., 2002), parece que Cicer arietinum requiere temperaturas mas moderadas para alterar efectivamente la permeabilidad de la testa.
+
 </div>
 
 ## Consideraciones prácticas
 
 <div style="text-align: justify;">
+
 Desde una perspectiva agronómica, el lijado ofrece ventajas claras: mejora el porcentaje y velocidad de germinación, incrementa el vigor, y favorece la sincronización temporal del proceso. Aunque la diferencia en tiempo medio con respecto al Control no fue significativa, la distribución más concentrada de la germinación sugiere un mejor comportamiento poblacional. En contraste, los tratamientos con acetona y agua caliente no lograron superar al Control, por lo que no se justifican su aplicación en términos de eficiencia ni de riesgo fitotóxico.
+
 </div>
 
 # <span style="color: orange;">CONCLUSIONES </span>
