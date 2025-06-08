@@ -138,6 +138,7 @@ d) Normalidad y homocedasticidad se verificaron con gráficas Q–Q y residuales
 e) Todo el análisis se ejecutó en R con los paquetes tidyverse 1.3.2, GerminaR 2.3.1, agricolae 1.3-7 y ggplot2 3.4.4.
 </div>
 
+
 ## Cargar librerias
 
 ```{r}
@@ -145,6 +146,7 @@ source("https://inkaverse.com/setup.r")
 library(tidyverse)
 library(GerminaR)
 ```
+
 
 ## Importar datos
 
