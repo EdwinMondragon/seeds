@@ -431,7 +431,7 @@ Desde una perspectiva agronómica, el lijado ofrece ventajas claras: mejora el p
 <div style="text-align: justify;">
 **a) Evaluar el porcentaje de germinación de las semillas de garbanzo (GRP).**
 
-El tratamiento con Lija fue el único que logró incrementar significativamente el porcentaje de germinación en semillas de *Cicer arietinum* en comparación con el Control, alcanzando un valor absoluto de 7,8 %. Si bien la germinación fue baja en términos generales, el lijado duplicó el GRP del Control y superó ampliamente a los tratamientos con Acetona y Agua caliente, los cuales no mostraron efecto positivo alguno. Esto confirma que la escarificación mecánica es el método más eficaz para superar la latencia física en esta especie.
+El tratamiento con Lija fue el único que logró incrementar significativamente el porcentaje de germinación en semillas de *Cicer arietinum* en comparación con el Control, alcanzando un valor absoluto de 99.2 %. Si bien la germinación fue baja en términos generales, el lijado duplicó el GRP del Control y superó ampliamente a los tratamientos con Acetona y Agua caliente, los cuales no mostraron efecto positivo alguno. Esto confirma que la escarificación mecánica es el método más eficaz para superar la latencia física en esta especie.
 
 **b) Determinar la germinación en el tiempo (MGT).**
 
